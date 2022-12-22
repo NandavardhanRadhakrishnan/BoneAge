@@ -15,8 +15,8 @@
             <Label x:Name="resultLbl" Margin="0,10,0,0" MinHeight="50" FontSize="22"></Label>
         </StackPanel>
         <StackPanel>
-            <RadioButton Content="Male" x:Name="radioMale" Checked="radioMale_Checked" FontSize="20" Margin="0,10,0,0" />
-            <RadioButton Content="Female" x:Name="radioFemale" Checked="radioFemale_Checked" FontSize="20" Margin="0,10,0,10" />
+            <RadioButton Content="Male" x:Name="radioMale" Checked="radioMale_Checked" FontSize="20" Margin="0,10,0,0" VerticalContentAlignment="Center"/>
+            <RadioButton Content="Female" x:Name="radioFemale" Checked="radioFemale_Checked" FontSize="20" Margin="0,10,0,10" VerticalContentAlignment="Center"/>
             <Button Content="Open Image" x:Name="btnOpenImage" Click="btnOpenImage_Click" Margin="0,10,0,10" />
             <Button Content="Submit" x:Name="btnSubmit" Margin="0,10,0,0" Click="btnSubmit_Click"></Button>
             <Label x:Name="lblOutput" />

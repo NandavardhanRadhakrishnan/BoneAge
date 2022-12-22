@@ -1,21 +1,9 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.IO;
-using Microsoft.ML;
-using Microsoft.ML.Data;
 using BoneAge;
 
 namespace FrontEnd
@@ -26,6 +14,7 @@ namespace FrontEnd
         bool male = true;
         private void btnOpenImage_Click(object sender, RoutedEventArgs e)
         {
+            resultLbl.Content = "";
             // Open a file dialog to select an image file
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
@@ -61,7 +50,6 @@ namespace FrontEnd
             {
                 Console.WriteLine(imagePath);
                 resultLbl.Content = imagePath.ToString();
-                //var imageBytes = File.ReadAllBytes("file:///C:/Users/prkna/Desktop/bone-age/data/Training/Male/10/3919.png");
                 var imageBytes = File.ReadAllBytes(imagePath.ToString().Substring(10));
                 if (male)
                 {
